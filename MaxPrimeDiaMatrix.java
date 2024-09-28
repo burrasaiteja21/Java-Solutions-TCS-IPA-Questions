@@ -36,14 +36,15 @@ public class MaxPrimeDiaMatrix {
                 }
             }
         }
-        for(int i = row-1; i>-1; i++)
+        for(int i = 0; i<row; i++)
         {
-            for(int j=0; j<col; j++)
+            for(int j=col-1-i; j>=0; j--)
             {
-                if(i==j)
+                if(i+j==col-1)
                 {
-                    dia2[i]=arr[i][j];
+                dia2[i]=arr[i][j];
                 }
+                
             }
         }
         int count = 0, loop, num2=0;
